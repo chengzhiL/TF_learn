@@ -11,7 +11,7 @@ y_data = datasets.load_iris().target
 # 随机打乱数据（ 因为原始数据是顺序的，顺序不打乱会影响准确率）
 # seed: 随机数种子，是一个整数，当设置后，每次生成的随机数都一样
 np.random.seed(116)
-np.random.shuffle(x_data)
+np.random.shuffle(x_data)  # 随机打乱数据
 np.random.seed(116)
 np.random.shuffle(y_data)
 tf.random.set_seed(116)
@@ -27,7 +27,7 @@ x_train = tf.cast(x_train,tf.float32)
 x_test = tf.cast(x_test,tf.float32)
 
 # from_tensor_slices 函数使输入特征和标签值一一对应。（把数据集分批次，每个批次batch组数据）
-train_db = tf.data.Dataset.from_tensor_slices((x_train,y_train)).batch(32)
+train_db = tf.data.Dataset.from_tensor_slices((x_train,y_train)).batch(32) # 分批次，每批次32个
 test_db = tf.data.Dataset.from_tensor_slices((x_test,y_test)).batch(32)
 
 # 生成神经网络的参数，4个输入特征，输入层为4个输入节点；因为3分类，故输出层为3个神经元
