@@ -48,7 +48,11 @@ for epoch in range(epoch): #数据集级别的循环，每个epoch 循环一次�
         with tf.GradientTape() as tape:
             y = tf.matmul(x_train,w1)+b1
             y = tf.nn.softmax(y)
+            print("softmax")
+            print(y)
             y_ = tf.one_hot(y_train, depth = 3)
+            print("one_hot")
+            print(y_)
             loss = tf.reduce_mean(tf.square(y-y_))
             loss_all += loss.numpy()
         # 计算loss对各个参数的梯度

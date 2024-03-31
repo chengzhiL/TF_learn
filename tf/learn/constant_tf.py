@@ -60,8 +60,8 @@ def creatTen03():
 
 if __name__ == '__main__':
     ## test02()#方法一定要定义在main函数之前。这应该和加载机制有关
-    constant02()
-
+    #constant02()
+    creatTen02()
 
 
 
