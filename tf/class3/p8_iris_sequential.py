@@ -11,6 +11,10 @@ np.random.seed(116)
 np.random.shuffle(y_train)
 tf.random.set_seed(116)
 
+# 输入层：无需定义输入层，输入层的形状根据输入参数自动确定
+# 隐藏层：该模型包含一个具有3个输出单元的全连接层
+# 激活函数：全连接层使用softmax激活函数，用于多分类问题
+# 正则化：使用L2正则化约束模型的参数，防止过拟合
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(3, activation='softmax', kernel_regularizer=tf.keras.regularizers.l2())
 ])
