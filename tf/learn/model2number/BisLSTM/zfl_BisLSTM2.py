@@ -94,7 +94,7 @@ for v in model.trainable_variables:
 file.close()
 
 ###############################################    show   ###############################################
-
+#rewrwerwerewr
 # 显示训练集和验证集的acc和loss曲线
 acc = history.history['sparse_categorical_accuracy']
 val_acc = history.history['val_sparse_categorical_accuracy']

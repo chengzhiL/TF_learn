@@ -16,6 +16,7 @@ def constant02():
     b = tf.convert_to_tensor(a,dtype=tf.int64)
     print(a)
     print(b)
+    #sfsf
 
     c = np.arange(24).reshape(2,3,4)
     d = tf.convert_to_tensor(c,dtype=tf.int64)
